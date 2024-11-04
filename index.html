@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flags</title>
+</head>
+<body>
+    <div id="flags">
+    <div id="bahrain">
+        
+        <div class="left"></div>
+        <div class="middle">
+            <div class="triangle"></div>
+            <div class="triangle"></div>
+            <div class="triangle"></div>
+            <div class="triangle"></div>
+            <div class="triangle"></div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div id="bahamas">
+            <div class="row1"></div>
+            <div class="row2"></div>
+            <div class="row3"></div>
+            <div class="tri"></div>
+    </div>
+    </div>
+
+<style>
+    #flags{
+        display: flex;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .right{
+        background-color: rgb(230, 68, 68);
+    }
+    .left{
+        background-color: rgb(255, 255, 255);
+    }
+    .middle{
+        background-color: rgb(230, 68, 68);
+    }
+    #bahrain{
+        display: grid;
+        width: 25rem;
+        height: 15rem;
+        padding: 0;
+        margin: 0;
+        grid-template-columns:1fr 1fr 3fr ;
+        border: solid 2px black;
+    }
+    #bahamas{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        width: 25rem;
+        height: 15rem;
+    }
+    .row1,.row3{
+        background-color: rgb(70, 213, 213);
+    }
+    .row2{
+        background-color: yellow;
+    }
+    .tri{
+        position: absolute;
+        align-self: center;
+        width: 0;
+        height: 0;
+        border-top: 120px solid transparent;
+  border-bottom: 120px solid transparent;
+  border-left: 140px solid black;
+    }
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 70px solid rgb(255, 255, 255);
+}
+@media(max-width:650px){
+    #flags{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+        gap: 10rem;
+    }
+}
+</style>
+
+</body>
+</html>
